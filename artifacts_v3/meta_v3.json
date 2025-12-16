@@ -1,0 +1,79 @@
+{
+  "created_at": "2025-11-10T11:39:59.214596",
+  "features": [
+    "Airline",
+    "Source",
+    "Destination",
+    "Additional_Info",
+    "route",
+    "duration_min",
+    "duration_hr",
+    "total_stops_num",
+    "journey_year",
+    "journey_month",
+    "journey_day",
+    "journey_weekday",
+    "journey_is_weekend",
+    "travel_season_num",
+    "is_holiday",
+    "dep_hour",
+    "dep_min",
+    "dep_is_night",
+    "dep_is_peak",
+    "arr_hour",
+    "arr_min",
+    "is_premium_airline",
+    "bad_duration_flag",
+    "route_freq",
+    "airline_freq",
+    "airline_route_freq"
+  ],
+  "categorical_columns": [
+    "Airline",
+    "Source",
+    "Destination",
+    "Additional_Info",
+    "route"
+  ],
+  "categorical_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "best_params": {
+    "learning_rate": 0.05874190536964785,
+    "depth": 8,
+    "l2_leaf_reg": 1.8693471071174743,
+    "bagging_temperature": 3.661320460568728,
+    "random_seed": 42,
+    "loss_function": "RMSE",
+    "n_estimators": 5000,
+    "od_type": "Iter",
+    "od_wait": 150,
+    "verbose": false
+  },
+  "cv_catboost": {
+    "RMSE": 1070.7720365328908,
+    "MAE": 614.2798697485659,
+    "MAPE%": 7.329844366948314,
+    "R2": 0.9360691933584181
+  },
+  "cv_lightgbm": {
+    "RMSE": 1102.1640055592413,
+    "MAE": 597.8927442687166,
+    "MAPE%": 7.174843595083666,
+    "R2": 0.932265708926665
+  },
+  "cv_ensemble": {
+    "RMSE": 1053.0427397875224,
+    "MAE": 584.685499518146,
+    "MAPE%": 6.980040949267945,
+    "R2": 0.9381687340170977
+  },
+  "ensemble_weights": {
+    "CatBoost": 0.6326080169568874,
+    "LightGBM": 0.3702596263116365
+  }
+}
